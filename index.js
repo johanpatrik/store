@@ -83,8 +83,8 @@ $("#myList").on("click", "button", function () {
 
   let inputQuantity = document.getElementById('i' + object.id).value;
 
-  if (inputQuantity < 0) {
-    alert('Please Pick a number of 1 or above');
+  if (inputQuantity < 1) {
+    alert('Please Pick a number of 1 or above  abc');
     document.getElementById('i' + object.id).value = 1;
     return;
   }
@@ -208,7 +208,7 @@ fetch(myRequest)
       var button = document.createElement('button');
       input.setAttribute('id', 'i' + object.id)
       input.setAttribute('type', 'number')
-      input.setAttribute('min', 0)
+      input.setAttribute('min', 1)
       button.setAttribute('id', object.id)
       button.innerHTML = 'Add to Cart'
       input.value = 1;
