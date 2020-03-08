@@ -17,38 +17,7 @@ tr.appendChild(th3);
 table.appendChild(tr);
 
 for (const object of objectsOrdered) {
-
-
-
-  // <table>
-  //   <tr>
-  //     <th>Firstname</th>
-  //     <th>Lastname</th>
-  //     <th>Age</th>
-  //   </tr>
-  //   <tr>
-  //     <td>Jill</td>
-  //     <td>Smith</td>
-  //     <td>50</td>
-  //   </tr>
-  //   <tr>
-  //     <td>Eve</td>
-  //     <td>Jackson</td>
-  //     <td>94</td>
-  //   </tr>
-  //   <tr>
-  //     <td>John</td>
-  //     <td>Doe</td>
-  //     <td>80</td>
-  //   </tr>
-  // </table>
-
-  //   <h3>Total: </h3>
-
-
-
-
-  // var node = document.createElement("LI");
+  
   var tr = document.createElement('tr');
   th1 = document.createElement('th');
   th2 = document.createElement('th');
@@ -63,13 +32,6 @@ for (const object of objectsOrdered) {
   tr.appendChild(th3);
 
   table.appendChild(tr);
-
-
-  console.log(table)
-
-  // var textnode = document.createTextNode(object.name + ' ' + object.price + ' ' + object.quantity);
-  // node.appendChild(textnode);
-  // document.getElementById("objectsOrdered").appendChild(node);
   document.getElementById("objectsOrdered").appendChild(table);
 }
 
