@@ -84,7 +84,7 @@ $("#myList").on("click", "button", function () {
   let inputQuantity = document.getElementById('i' + object.id).value;
 
   if (inputQuantity < 1) {
-    alert('Please Pick a number of 1 or above  abc');
+    alert('Please Pick a number of 1 or above');
     document.getElementById('i' + object.id).value = 1;
     return;
   }
