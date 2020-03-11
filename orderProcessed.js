@@ -2,7 +2,7 @@ let objectsOrdered = JSON.parse(localStorage.getItem('objectsOrdered'));
 
 var table = document.createElement('table');
 var tr = document.createElement('tr');
-tr.setAttribute('id','a')
+tr.setAttribute('id','tableRowTitle')
 var th1 = document.createElement('th');
 var th2 = document.createElement('th');
 var th3 = document.createElement('th');
