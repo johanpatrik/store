@@ -1,4 +1,4 @@
-const ul = document.querySelector('#myList');
+const ul = document.querySelector('#store');
 let objectsInCart = [];
 let objects = [];
 let total = 0;
@@ -72,7 +72,7 @@ function objectNotInCart(objectName, objectQuantity) {
   return true;
 }
 
-$("#myList").on("click", "button", function () {
+$("#store").on("click", "button", function () {
   let object;
 
   objects.forEach(obj => {
@@ -120,18 +120,13 @@ $("#myList").on("click", "button", function () {
 
     btnSetQuantity.addEventListener('click', function () {
 
-      if (input.value < 0) {
-        alert('Please Pick a number of 0 or above');
+      if (input.value < 1) {
+        alert('Please Pick a number of 1 or above');
         input.value = object.quantity;
         return;
       }
-
-      for (let i = 0; i < objectsInCart.length; i++) {
-        if (input.value == 0) {
-          objectsInCart.splice(i, 1);
-          input.parentNode.remove();
-        }
-      }
+     
+      
 
       let priceOfObjectsRemoved = object.quantity * object.price;
       object.quantity = input.value;
@@ -216,9 +211,9 @@ fetch(myRequest)
       node.appendChild(textnode);
       node.appendChild(input);
       node.appendChild(button);
-      document.getElementById("myList").appendChild(node);
-      document.getElementById("myList").appendChild(input);
-      document.getElementById("myList").appendChild(button);
+      document.getElementById("store").appendChild(node);
+      document.getElementById("store").appendChild(input);
+      document.getElementById("store").appendChild(button);
     }
   })
   .catch(err => console.log(err));
