@@ -1,10 +1,10 @@
 const ul = document.querySelector('#store');
 let objectsInCart = [];
-let objects = [];
+let objectsInStore = [];
 let total = 0;
 
 const orderBtn = document.getElementById('orderBtn')
-const emptyCartBtn = document.getElementById('emptyCartBtn')
+const emptyCartBtn = document.getElementById('emptyCart')
 
 orderBtn.addEventListener('click', sendOrder);
 emptyCartBtn.addEventListener('click', emptyCart);
@@ -65,7 +65,7 @@ function objectNotInCart(objectName, objectQuantity) {
 
       var input = document.getElementById('ci' + object.id);
       input.value = object.quantity
-      node.innerText = object.name + ' ' + object.price;
+      node.innerText = object.name + ' ' + object.price + ':- st';
       return false;
     }
   }
@@ -75,7 +75,7 @@ function objectNotInCart(objectName, objectQuantity) {
 $("#store").on("click", "button", function () {
   let object;
 
-  objects.forEach(obj => {
+  objectsInStore.forEach(obj => {
     if (obj.id == $(this)[0].id) {
       object = obj;
     }
@@ -125,8 +125,8 @@ $("#store").on("click", "button", function () {
         input.value = object.quantity;
         return;
       }
-     
-      
+
+
 
       let priceOfObjectsRemoved = object.quantity * object.price;
       object.quantity = input.value;
@@ -195,7 +195,7 @@ const myRequest = new Request('data.json');
 fetch(myRequest)
   .then(resp => resp.json())
   .then(data => {
-    objects = data
+    objectsInStore = data
 
     for (const object of data) {
       var node = document.createElement("LI");
