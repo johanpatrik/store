@@ -4,7 +4,7 @@ let objectsInStore = [];
 let total = 0;
 
 const orderBtn = document.getElementById('orderBtn')
-const emptyCartBtn = document.getElementById('emptyCart')
+const emptyCartBtn = document.getElementById('emptyCartBtn')
 
 orderBtn.addEventListener('click', sendOrder);
 emptyCartBtn.addEventListener('click', emptyCart);
